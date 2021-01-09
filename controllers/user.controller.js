@@ -10,9 +10,9 @@ module.exports.isAuthenticated = async (req, res, next) => {
             return res.status(400).json({ error: true, data: null, token: null, message: 'user not authenticated' });
         }
         next();
-    } catch (e) {
+    }catch (e) {
         console.error(e);
-        return res.status(500).json({ error: e.message, data: null, token: null, message: "something went wrong"
+        return res.status(500).json({ error: e.message, data: undefined, token: undefined, message: "something went wrong"
         });
     }
 }

@@ -1,17 +1,16 @@
 const Shop = require('../models/Shop.model');
 
-// create
+// Create
 module.exports.create = shop => {
     return Shop.create(shop);
 }
-
-// read all
+//find all
 module.exports.getAll = () => {
-    return Shop.find({});
+return Shop.find({});
 }
 
-// read one
-module.exports.getById = (id) => {
+//read One
+module.exports.getById = id => {
     return Shop.findById({_id: id});
 }
 

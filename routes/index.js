@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const middleware = require('../middlewares/middlewares');
 
-// Get Homepage
+/* GET home page. */
 router.get('/', function(req, res, next) {
   res.json({ message: 'Hello World'});
 });
